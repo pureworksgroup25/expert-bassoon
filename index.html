@@ -1,0 +1,196 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pureworks Group (Pty) Ltd</title>
+
+<style>
+/* ===== BASE ===== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background-color: #f2f5f7;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #f1c40f;
+  font-weight: bold;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  background-color: white;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== SERVICE BOX ===== */
+.service-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fafafa;
+  border-left: 5px solid #2c3e50;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+h2, h3 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header class="reveal">
+  <img src="logo.png" alt="Business Logo">
+  <h1>Pureworks Group (Pty) Ltd</h1>
+  <p>The scope may change, but the standard never does</p>
+</header>
+
+<section class="reveal">
+<h2>About Us</h2>
+<p>
+At <strong>Pureworks Group</strong>, we are a multidisciplinary service provider dedicated to excellence in environmental management and corporate support. We combine physical maintenance with professional business compliance to give our clients peace of mind. 
+  We operate as a online, mobile and appointment-based service, allowing us to deliver professional cleaning and compliance solutions directly at our clients’ locations nationwide
+</p>
+</section>
+
+<section class="reveal">
+<h2>Our Services</h2>
+
+<div class="service-box reveal">
+<h3>Facility & Environmental Services</h3>
+<p>Residential & Commercial Cleaning</p>
+<p>Landscaping & Garden Maintenance</p>
+<p>Post-Construction & Event Cleaning</p>
+<p>Window Cleaning & Junk Removal</p>
+</div>
+
+<div class="service-box reveal">
+<h3>Corporate & Compliance Solutions</h3>
+<ul>
+<li>Company Registration (Pty & NPO)</li>
+<li>CIPC Annual Returns</li>
+<li>Tax Compliance Status</li>
+<li>B-BBEE Certificates</li>
+<li>Trademark & Logo Registration</li>
+</ul>
+</div>
+
+<div class="service-box reveal">
+<h3>Digital & Creative Media</h3>
+<ul>
+<li>Professional Website Creation</li>
+<li>Domain Registration</li>
+<li>Business Profiles</li>
+<li>Logo & Poster Design</li>
+</ul>
+</div>
+
+</section>
+
+<section class="reveal">
+<h2>Business Hours</h2>
+<p>Monday – Friday: 8:00 AM – 6:00 PM</p>
+<p>Saturday: 9:00 AM – 3:00 PM</p>
+<p>Sunday & Public Holidays: By Appointment</p>
+</section>
+
+<section class="reveal">
+<h2>Contact Us</h2>
+<p><strong>Phone:</strong> +27 79 038 0441</p>
+<p><strong>Email:</strong> pureworksgroup25@gmail.com</p>
+</section>
+
+<footer class="reveal">
+<p>© 2026 Pureworks Group (Pty) Ltd</p>
+</footer>
+
+<a href="https://wa.me/27790380441" class="whatsapp-button" target="_blank">
+💬 Get a Quote on WhatsApp
+</a>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const revealTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add('active');
+    }
+  }
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>
+
+
